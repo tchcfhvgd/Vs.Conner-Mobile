@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				437,
+				-89
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "ConnerWep right0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-41,
+				-176
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "ConnerWep down0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-35,
+				-40
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "ConnerWep up0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-16,
+				73
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "ConnerWep left0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-120
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "ConnerWep idle0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ConnerMAD",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon_madconner",
+	"flip_x": false,
+	"healthbar_colors": [
+		245,
+		252,
+		247
+	],
+	"camera_position": [
+		-10,
+		90
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

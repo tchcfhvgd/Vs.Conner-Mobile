@@ -1,0 +1,23 @@
+{
+	"songs": [
+		["cattingstar", "conner", [165, 0, 77]],
+		["catvania", "conner", [165, 0, 77]],
+		["catserious", "madmadconner", [165, 0, 77]],
+		["catvolution", "angiconner", [165, 0, 77]]
+	],
+
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"weekBackground": "stage",
+
+	"storyName": "",
+	"weekBefore": "tutorial",
+	"weekName": "Tutorial",
+	"startUnlocked": true,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false
+}

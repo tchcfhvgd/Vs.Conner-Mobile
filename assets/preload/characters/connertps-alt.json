@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				345,
+				-103
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				355,
+				-76
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				340,
+				-80
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				372,
+				-89
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				308,
+				-73
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/conner_tps_2",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon_conner",
+	"flip_x": true,
+	"healthbar_colors": [
+		245,
+		252,
+		227
+	],
+	"camera_position": [
+		-170,
+		60
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

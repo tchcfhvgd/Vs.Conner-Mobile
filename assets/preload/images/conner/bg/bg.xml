@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bg.png">
+	<!-- Created with Adobe Animate version 21.0.9.42677 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="credit0000" x="5" y="5" width="1280" height="741"/>
+	<SubTexture name="freeplay0000" x="1290" y="5" width="1280" height="741"/>
+	<SubTexture name="lock0000" x="2575" y="5" width="1280" height="741"/>
+	<SubTexture name="options0000" x="5" y="751" width="1280" height="741"/>
+	<SubTexture name="story0000" x="1290" y="751" width="1280" height="741"/>
+</TextureAtlas>

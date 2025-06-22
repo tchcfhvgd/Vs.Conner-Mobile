@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				-156
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				-13
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-80
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				62,
+				-119
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-75,
+				-141
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				13,
+				-76
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "nyaw0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/rockstar-corner",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon-rockstar",
+	"flip_x": false,
+	"healthbar_colors": [
+		252,
+		200,
+		86
+	],
+	"camera_position": [
+		-10,
+		160
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

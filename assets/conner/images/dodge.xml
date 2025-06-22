@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dodge.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="DodgeIt instance 10000" x="1" y="1" width="1076" height="961" frameX="-61" frameY="-54" frameWidth="1198" frameHeight="1069"/>
+	<SubTexture name="DodgeIt instance 10001" x="1087" y="1" width="1105" height="986" frameX="-46" frameY="-41" frameWidth="1198" frameHeight="1069"/>
+	<SubTexture name="DodgeIt instance 10002" x="2202" y="1" width="1130" height="1008" frameX="-34" frameY="-30" frameWidth="1198" frameHeight="1069"/>
+	<SubTexture name="DodgeIt instance 10003" x="1" y="1019" width="1150" height="1026" frameX="-24" frameY="-21" frameWidth="1198" frameHeight="1069"/>
+	<SubTexture name="DodgeIt instance 10004" x="1161" y="1019" width="1168" height="1042" frameX="-15" frameY="-13" frameWidth="1198" frameHeight="1069"/>
+	<SubTexture name="DodgeIt instance 10005" x="2339" y="1019" width="1182" height="1054" frameX="-8" frameY="-7" frameWidth="1198" frameHeight="1069"/>
+	<SubTexture name="DodgeIt instance 10006" x="1" y="2083" width="1190" height="1062" frameX="-4" frameY="-3" frameWidth="1198" frameHeight="1069"/>
+	<SubTexture name="DodgeIt instance 10007" x="1201" y="2083" width="1196" height="1067" frameX="-1" frameY="-1" frameWidth="1198" frameHeight="1069"/>
+	<SubTexture name="DodgeIt instance 10008" x="2407" y="2083" width="1198" height="1069"/>
+	<SubTexture name="DodgeIt instance 10009" x="2407" y="2083" width="1198" height="1069"/>
+	<SubTexture name="DodgeIt instance 10010" x="2407" y="2083" width="1198" height="1069"/>
+	<SubTexture name="DodgeIt instance 10011" x="2407" y="2083" width="1198" height="1069"/>
+	<SubTexture name="DodgeIt instance 10012" x="2407" y="2083" width="1198" height="1069"/>
+	<SubTexture name="DodgeIt instance 10013" x="2407" y="2083" width="1198" height="1069"/>
+	<SubTexture name="DodgeIt instance 10014" x="2407" y="2083" width="1198" height="1069"/>
+</TextureAtlas>

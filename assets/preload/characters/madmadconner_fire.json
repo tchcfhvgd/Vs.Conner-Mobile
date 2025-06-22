@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				217,
+				-176
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "ConnerWep down instance 1"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				95,
+				-44
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "ConnerWep up instance 1"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				160,
+				-120
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "ConnerWep idle instance 1"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				226,
+				-200
+			],
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "Conner ATTACK instance 1"
+		},
+		{
+			"offsets": [
+				388,
+				77
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "ConnerWep left instance 1"
+		},
+		{
+			"offsets": [
+				-86,
+				-82
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "ConnerWep right instance 1"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ConnerMAD_fire",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon_madconner",
+	"flip_x": false,
+	"healthbar_colors": [
+		245,
+		252,
+		247
+	],
+	"camera_position": [
+		-710,
+		200
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,9 @@
+{
+	"directory": "conner",
+	"defaultZoom": 0.9,
+	"isPixelStage": false,
+
+	"boyfriend": [100, 260],
+	"girlfriend": [250, 98],
+	"opponent": [600, 200]
+}
