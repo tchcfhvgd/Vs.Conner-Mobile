@@ -2840,7 +2840,7 @@ class PlayState extends MusicBeatState
 				timer.active = true;
 			}
 			
-			if(phillyCityLightsEventTween != null)
+			if(qqqebEventTween != null)
 				qqqebEventTween.active = true;
 			
 			paused = false;
@@ -5157,7 +5157,7 @@ class PlayState extends MusicBeatState
 		FlxG.sound.music.fadeTween = null;
 	}
 	
-	public function eye() {
+	public static function eye() {
 		FlxG.sound.play(Paths.sound('eye'), 0.6);
 		health -= 0.05;
 		if(qqqebEventTween != null)
