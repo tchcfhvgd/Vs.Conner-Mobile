@@ -5157,7 +5157,7 @@ class PlayState extends MusicBeatState
 		FlxG.sound.music.fadeTween = null;
 	}
 	
-	public function eye() {
+	public function eyes() {
 		FlxG.sound.play(Paths.sound('eye'), 0.6);
 		health -= 0.05;
 		if(qqqebEventTween != null)
@@ -5192,71 +5192,71 @@ class PlayState extends MusicBeatState
 	    switch (curStep)
 	    {
 	       case 21:
-	       eye();
+	       eyes();
 	       case 43:
-	       eye();
+	       eyes();
 	       case 75:
-	       eye();
+	       eyes();
 	       case 121:
-	       eye();
+	       eyes();
 	       case 164:
-	       eye();
+	       eyes();
 	       case 227:
-	       eye();
+	       eyes();
 	       case 350:
-	       eye();
+	       eyes();
 	       case 410:
-	       eye();
+	       eyes();
 	       case 420:
-	       eye();
+	       eyes();
 	       case 430:
-	       eye();
+	       eyes();
 	       case 440:
-	       eye();
+	       eyes();
 	       case 450:
-	       eye();
+	       eyes();
 	       case 460:
-	       eye();
+	       eyes();
 	       case 471:
-	       eye();
+	       eyes();
 	       case 494:
-	       eye();
+	       eyes();
 	       case 585:
-	       eye();
+	       eyes();
 	       case 646:
-	       eye();
+	       eyes();
 	       case 660:
-	       eye();
+	       eyes();
 	       case 718:
-	       eye();
+	       eyes();
 	       case 820:
-	       eye();
+	       eyes();
 	       case 830:
-	       eye();
+	       eyes();
 	       case 923:
-	       eye();
+	       eyes();
 	       case 996:
-	       eye();
+	       eyes();
 	       case 1030:
-	       eye();
+	       eyes();
 	       case 1056:
-	       eye();
+	       eyes();
 	       case 1090:
-	       eye();
+	       eyes();
 	       case 1130:
-	       eye();
+	       eyes();
 	       case 1160:
-	       eye();
+	       eyes();
 	       case 1174:
-	       eye();
+	       eyes();
 	       case 1190:
-	       eye();
+	       eyes();
 	       case 1245:
-	       eye();
+	       eyes();
 	       case 1263:
-	       eye();
+	       eyes();
 	       case 1379:
-	       eye();
+	       eyes();
 	     }
 	     }
 		
