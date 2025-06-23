@@ -1367,6 +1367,14 @@ class PlayState extends MusicBeatState
 
 				case 'ugh' | 'guns' | 'stress':
 					tankIntro();
+				case 'cattingstar':
+				    startVideo('cut1')
+				case 'catvania':
+				    startVideo('cut2')
+				case 'catserious':
+				    startVideo('cut3')
+				case 'catvolution':
+				    startVideo('cut4')
 
 				default:
 					startCountdown();
@@ -2673,7 +2681,6 @@ class PlayState extends MusicBeatState
 			case 'Philly Glow':
 				blammedLightsBlack = new FlxSprite(FlxG.width * -0.5, FlxG.height * -0.5).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 				blammedLightsBlack.visible = false;
-				insert(members.indexOf(phillyStreet), blammedLightsBlack);
 
 				phillyWindowEvent = new BGSprite('philly/window', phillyWindow.x, phillyWindow.y, 0.3, 0.3);
 				phillyWindowEvent.setGraphicSize(Std.int(phillyWindowEvent.width * 0.85));
@@ -3595,9 +3602,9 @@ class PlayState extends MusicBeatState
 								camHUD.zoom += 0.1;
 							}
 
-							blammedLightsBlack.visible = true;
+							blammedLightsBlack.visible = false;
 							blammedLightsBlack.alpha = 1;
-							phillyWindowEvent.visible = true;
+							phillyWindowEvent.visible = false;
 							phillyGlowGradient.visible = true;
 							phillyGlowParticles.visible = true;
 						}
@@ -5158,12 +5165,12 @@ class PlayState extends MusicBeatState
 	}
 	
 	public function eyes() {
-		FlxG.sound.play(Paths.sound('eye'), 0.6);
-		health -= 0.05;
+		FlxG.sound.play(Paths.sound('eye'), 0.5);
+		health -= 0.1;
 		if(qqqebEventTween != null)
 		qqqebEventTween.cancel();
 
-		qqqebEventTween = FlxTween.tween(eye, {alpha: 0.5}, 0.3, {onComplete: function(twn:FlxTween) {
+		qqqebEventTween = FlxTween.tween(eye, {alpha: 0.3}, 0.3, {onComplete: function(twn:FlxTween) {
 								//qqqebEventTween = null;
 		qqqebEventTween = FlxTween.tween(eye, {alpha: 0}, 0.3, {onComplete: function(twn:FlxTween) {
 								qqqebEventTween = null;
