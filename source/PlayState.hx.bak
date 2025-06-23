@@ -1368,13 +1368,13 @@ class PlayState extends MusicBeatState
 				case 'ugh' | 'guns' | 'stress':
 					tankIntro();
 				case 'cattingstar':
-				    startVideo('cut1');
+				    startVideo('cut1')
 				case 'catvania':
-				    startVideo('cut2');
+				    startVideo('cut2')
 				case 'catserious':
-				    startVideo('cut3');
+				    startVideo('cut3')
 				case 'catvolution':
-				    startVideo('cut4');
+				    startVideo('cut4')
 
 				default:
 					startCountdown();
