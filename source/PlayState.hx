@@ -2681,14 +2681,6 @@ class PlayState extends MusicBeatState
 			case 'Philly Glow':
 				blammedLightsBlack = new FlxSprite(FlxG.width * -0.5, FlxG.height * -0.5).makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
 				blammedLightsBlack.visible = false;
-
-				phillyWindowEvent = new BGSprite('philly/window', phillyWindow.x, phillyWindow.y, 0.3, 0.3);
-				phillyWindowEvent.setGraphicSize(Std.int(phillyWindowEvent.width * 0.85));
-				phillyWindowEvent.updateHitbox();
-				phillyWindowEvent.visible = false;
-				insert(members.indexOf(blammedLightsBlack) + 1, phillyWindowEvent);
-
-
 				phillyGlowGradient = new PhillyGlow.PhillyGlowGradient(-400, 225); //This shit was refusing to properly load FlxGradient so fuck it
 				phillyGlowGradient.visible = false;
 				insert(members.indexOf(blammedLightsBlack) + 1, phillyGlowGradient);
@@ -3577,7 +3569,7 @@ class PlayState extends MusicBeatState
 							}
 
 							blammedLightsBlack.visible = false;
-							phillyWindowEvent.visible = false;
+				
 							phillyGlowGradient.visible = false;
 							phillyGlowParticles.visible = false;
 							curLightEvent = -1;
@@ -3586,7 +3578,6 @@ class PlayState extends MusicBeatState
 							{
 								who.color = FlxColor.WHITE;
 							}
-							phillyStreet.color = FlxColor.WHITE;
 						}
 
 					case 1: //turn on
@@ -3604,7 +3595,7 @@ class PlayState extends MusicBeatState
 
 							blammedLightsBlack.visible = false;
 							blammedLightsBlack.alpha = 1;
-							phillyWindowEvent.visible = false;
+				
 							phillyGlowGradient.visible = true;
 							phillyGlowParticles.visible = true;
 						}
@@ -3628,10 +3619,8 @@ class PlayState extends MusicBeatState
 							particle.color = color;
 						});
 						phillyGlowGradient.color = color;
-						phillyWindowEvent.color = color;
 
 						color.brightness *= 0.5;
-						phillyStreet.color = color;
 
 					case 2: // spawn particles
 						if(!ClientPrefs.lowQuality)
