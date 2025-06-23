@@ -848,6 +848,8 @@ class PlayState extends MusicBeatState
 				foregroundSprites.add(new BGSprite('tank5', 1620, 700, 1.5, 1.5, ['fg']));
 				if(!ClientPrefs.lowQuality) foregroundSprites.add(new BGSprite('tank3', 1300, 1200, 3.5, 2.5, ['fg']));
 		}
+		
+		phillyLightsColors = [0xFF31A2FD, 0xFF31FD8C, 0xFFFB33F5, 0xFFFD4531, 0xFFFBA633];
 
 		switch(Paths.formatToSongPath(SONG.song))
 		{
@@ -5159,7 +5161,7 @@ class PlayState extends MusicBeatState
 		if(qqqebEventTween != null)
 		qqqebEventTween.cancel();
 
-		qqqebEventTween = FlxTween.tween(eye, {alpha: 0.3}, 0.3, {onComplete: function(twn:FlxTween) {
+		qqqebEventTween = FlxTween.tween(eye, {alpha: 0.35}, 0.3, {onComplete: function(twn:FlxTween) {
 								//qqqebEventTween = null;
 		qqqebEventTween = FlxTween.tween(eye, {alpha: 0}, 0.3, {onComplete: function(twn:FlxTween) {
 								qqqebEventTween = null;
