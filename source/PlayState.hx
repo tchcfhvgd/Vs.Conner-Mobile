@@ -246,6 +246,7 @@ class PlayState extends MusicBeatState
 
 	var phillyGlowGradient:PhillyGlow.PhillyGlowGradient;
 	var phillyGlowParticles:FlxTypedGroup<PhillyGlow.PhillyGlowParticle>;
+	var qqqebEventTween:FlxTween;
 
 	var limoKillingState:Int = 0;
 	var limo:BGSprite;
@@ -271,6 +272,8 @@ class PlayState extends MusicBeatState
 	var tankGround:BGSprite;
 	var tankmanRun:FlxTypedGroup<TankmenBG>;
 	var foregroundSprites:FlxTypedGroup<BGSprite>;
+	
+	public var eye:FlxSprite;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -1183,6 +1186,15 @@ class PlayState extends MusicBeatState
 		add(botplayTxt);
 		if(ClientPrefs.downScroll) {
 			botplayTxt.y = timeBarBG.y - 78;
+		}
+		
+		eye = new FlxSprite(-130, -270).loadGraphic(Paths.image('eye'));
+		eye.alpha = 0;
+		eye.cameras = [camOther];
+		switch(Paths.formatToSongPath(SONG.song))
+		{
+			case 'catserious':
+				add(eye);
 		}
 
 		strumLineNotes.cameras = [camHUD];
@@ -2788,6 +2800,9 @@ class PlayState extends MusicBeatState
 			for (timer in modchartTimers) {
 				timer.active = false;
 			}
+			
+			if(qqqebEventTween != null)
+				qqqebEventTween.active = false;
 		}
 
 		super.openSubState(SubState);
@@ -2824,6 +2839,10 @@ class PlayState extends MusicBeatState
 			for (timer in modchartTimers) {
 				timer.active = true;
 			}
+			
+			if(phillyCityLightsEventTween != null)
+				qqqebEventTween.active = true;
+			
 			paused = false;
 			callOnLuas('onResume', []);
 
@@ -5137,6 +5156,20 @@ class PlayState extends MusicBeatState
 		}
 		FlxG.sound.music.fadeTween = null;
 	}
+	
+	public function eye() {
+		FlxG.sound.play(Paths.sound('eye'), 0.6);
+		health -= 0.05;
+		if(qqqebEventTween != null)
+		qqqebEventTween.cancel();
+
+		qqqebEventTween = FlxTween.tween(eye, {alpha: 0.5}, 0.3, {onComplete: function(twn:FlxTween) {
+								//qqqebEventTween = null;
+		qqqebEventTween = FlxTween.tween(eye, {alpha: 0}, 0.3, {onComplete: function(twn:FlxTween) {
+								qqqebEventTween = null;
+							}, ease: FlxEase.quadInOut});
+							}, ease: FlxEase.quadInOut});
+	}
 
 	var lastStepHit:Int = -1;
 	override function stepHit()
@@ -5153,6 +5186,80 @@ class PlayState extends MusicBeatState
 		}
 
 		lastStepHit = curStep;
+		
+		if (curSong == 'catserious') 
+        {
+	    switch (curStep)
+	    {
+	       case 21:
+	       eye();
+	       case 43:
+	       eye();
+	       case 75:
+	       eye();
+	       case 121:
+	       eye();
+	       case 164:
+	       eye();
+	       case 227:
+	       eye();
+	       case 350:
+	       eye();
+	       case 410:
+	       eye();
+	       case 420:
+	       eye();
+	       case 430:
+	       eye();
+	       case 440:
+	       eye();
+	       case 450:
+	       eye();
+	       case 460:
+	       eye();
+	       case 471:
+	       eye();
+	       case 494:
+	       eye();
+	       case 585:
+	       eye();
+	       case 646:
+	       eye();
+	       case 660:
+	       eye();
+	       case 718:
+	       eye();
+	       case 820:
+	       eye();
+	       case 830:
+	       eye();
+	       case 923:
+	       eye();
+	       case 996:
+	       eye();
+	       case 1030:
+	       eye();
+	       case 1056:
+	       eye();
+	       case 1090:
+	       eye();
+	       case 1130:
+	       eye();
+	       case 1160:
+	       eye();
+	       case 1174:
+	       eye();
+	       case 1190:
+	       eye();
+	       case 1245:
+	       eye();
+	       case 1263:
+	       eye();
+	       case 1379:
+	       eye();
+	     }
+	     }
+		
 		setOnLuas('curStep', curStep);
 		callOnLuas('onStepHit', []);
 	}
