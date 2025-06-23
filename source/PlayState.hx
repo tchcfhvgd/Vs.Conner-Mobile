@@ -5157,7 +5157,7 @@ class PlayState extends MusicBeatState
 		FlxG.sound.music.fadeTween = null;
 	}
 	
-	public static function eye() {
+	public function eye() {
 		FlxG.sound.play(Paths.sound('eye'), 0.6);
 		health -= 0.05;
 		if(qqqebEventTween != null)
