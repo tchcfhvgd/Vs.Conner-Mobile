@@ -400,10 +400,10 @@ class TitleState extends MusicBeatState
 
 		credTextShit.visible = false;
 
-		logo3 = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('logo3'));
+		logo3 = new FlxSprite(0, FlxG.height * 1).loadGraphic(Paths.image('logo3'));
 		add(logo3);
 		logo3.visible = false;
-		logo3.setGraphicSize(Std.int(logo3.width * 0.8));
+		logo3.setGraphicSize(Std.int(logo3.width * 0.6));
 		logo3.updateHitbox();
 		logo3.screenCenter(X);
 		logo3.antialiasing = ClientPrefs.globalAntialiasing;
@@ -663,7 +663,7 @@ class TitleState extends MusicBeatState
 				case 6:
 					logo3.visible = true;
 				case 8:
-					createCoolText(['present'], 40);
+					createCoolText(['present'], 120);
 				// credTextShit.text += '\nNewgrounds';
 				case 9:
 					deleteCoolText();

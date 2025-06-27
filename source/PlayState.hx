@@ -525,6 +525,14 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+			case 'connerfire': //Conner
+			    var bg:BGSprite = new BGSprite('bgfire', -590, -210, 1, 1);
+				add(bg);
+				
+				var fire:FlxSprite = new FlxSprite(-800, 0);
+				fire.frames = Paths.getSparrowAtlas('fire');
+				fire.animation.addByPrefix('idle', 'fire', 24, true);
+			    fire.animation.play('idle');
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
@@ -864,6 +872,9 @@ class PlayState extends MusicBeatState
 		add(gfGroup); //Needed for blammed lights
 
 		// Shitty layering but whatev it works LOL
+		if (curStage == 'connerfire')
+			add(fire);
+		
 		if (curStage == 'limo')
 			add(limo);
 
