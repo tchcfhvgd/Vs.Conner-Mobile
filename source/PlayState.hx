@@ -229,6 +229,8 @@ class PlayState extends MusicBeatState
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 	var dialogueJson:DialogueFile = null;
 
+	var fire:FlxSprite;
+	
 	var dadbattleBlack:BGSprite;
 	var dadbattleLight:BGSprite;
 	var dadbattleSmokes:FlxSpriteGroup;
@@ -529,7 +531,7 @@ class PlayState extends MusicBeatState
 			    var bg:BGSprite = new BGSprite('bgfire', -590, -210, 1, 1);
 				add(bg);
 				
-				var fire:FlxSprite = new FlxSprite(-800, 0);
+				fire = new FlxSprite(-800, 0);
 				fire.frames = Paths.getSparrowAtlas('fire');
 				fire.animation.addByPrefix('idle', 'fire', 24, true);
 			    fire.animation.play('idle');
