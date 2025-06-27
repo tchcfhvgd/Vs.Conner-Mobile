@@ -400,7 +400,7 @@ class TitleState extends MusicBeatState
 
 		credTextShit.visible = false;
 
-		logo3 = new FlxSprite(0, FlxG.height * 1).loadGraphic(Paths.image('logo3'));
+		logo3 = new FlxSprite(0, 500).loadGraphic(Paths.image('logo3'));
 		add(logo3);
 		logo3.visible = false;
 		logo3.setGraphicSize(Std.int(logo3.width * 0.6));

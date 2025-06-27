@@ -533,7 +533,7 @@ class PlayState extends MusicBeatState
 				
 				fire = new FlxSprite(-800, 0);
 				fire.frames = Paths.getSparrowAtlas('fire');
-				fire.animation.addByPrefix('idle', 'fire', 24, true);
+				fire.animation.addByPrefix('idle', 'FIREEE instance 1', 24);
 			    fire.animation.play('idle');
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
