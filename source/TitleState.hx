@@ -662,7 +662,6 @@ class TitleState extends MusicBeatState
 				// credTextShit.screenCenter();
 				case 6:
 					logo3.visible = true;
-					#end
 				case 8:
 					createCoolText(['present'], 40);
 				// credTextShit.text += '\nNewgrounds';
