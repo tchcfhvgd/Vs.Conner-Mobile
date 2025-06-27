@@ -1169,7 +1169,7 @@ class PlayState extends MusicBeatState
 			'health', 0, 2);
 		healthBar.scrollFactor.set();
 		// healthBar
-		if (flipHP) {
+		if (flipHealthBar) {
 		healthBar.angle = 180;
 		}
 		healthBar.numDivisions = 10000;
@@ -3144,7 +3144,7 @@ class PlayState extends MusicBeatState
 		healthBar.percent = percent;
 		if (percent > 100) {percent = 100;}
 		
-		if (flipHP) {
+		if (flipHealthBar) {
 			iconP2.x = FlxMath.lerp(iconP2.x, healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 0, 100) * 0.01)) + (150 * 1 - 150) / 2 - iconOffset, CoolUtil.boundTo(elapsed * 9.8, 0, 1));
 			iconP1.x = FlxMath.lerp(iconP1.x, healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 0, 100) * 0.01)) - (150 * 1) / 2 - iconOffset * 2, CoolUtil.boundTo(elapsed * 9.8, 0, 1));
 			}
