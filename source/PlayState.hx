@@ -1169,6 +1169,10 @@ class PlayState extends MusicBeatState
 			'health', 0, 2);
 		healthBar.scrollFactor.set();
 		// healthBar
+		if (flipHP) {
+		healthBar.angle = 180;
+		}
+		healthBar.numDivisions = 10000;
 		healthBar.visible = !ClientPrefs.hideHud;
 		healthBar.alpha = ClientPrefs.healthBarAlpha;
 		add(healthBar);
@@ -2947,6 +2951,7 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
+	var percent:Float = 50;
 
 	override public function update(elapsed:Float)
 	{
@@ -3109,7 +3114,7 @@ class PlayState extends MusicBeatState
 			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
 		}
 
-		if (#if android FlxG.android.justReleased.BACK #else touchPad.buttonP.justPressed #end || controls.PAUSE && startedCountdown && canPause)
+		if ((#if android FlxG.android.justReleased.BACK #else touchPad.buttonP.justPressed #end || controls.PAUSE) && startedCountdown && canPause)
 		{
 			var ret:Dynamic = callOnLuas('onPause', [], false);
 			if(ret != FunkinLua.Function_Stop) {
@@ -3135,13 +3140,17 @@ class PlayState extends MusicBeatState
 
 		var iconOffset:Int = 26;
 
-		if (flipHealthBar) {
-		iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 0, 100) * 0.01)) + (150 * 1 - 150) / 2 - iconOffset;
-		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 0, 100) * 0.01)) - (150 * 1) / 2 - iconOffset * 2;
-		}
+		percent = FlxMath.lerp(percent, health * 50, CoolUtil.boundTo(elapsed * 9.1, 0, 1));
+		healthBar.percent = percent;
+		if (percent > 100) {percent = 100;}
+		
+		if (flipHP) {
+			iconP2.x = FlxMath.lerp(iconP2.x, healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 0, 100) * 0.01)) + (150 * 1 - 150) / 2 - iconOffset, CoolUtil.boundTo(elapsed * 9.8, 0, 1));
+			iconP1.x = FlxMath.lerp(iconP1.x, healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 0, 100) * 0.01)) - (150 * 1) / 2 - iconOffset * 2, CoolUtil.boundTo(elapsed * 9.8, 0, 1));
+			}
 		else {
-	    iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * 1 - 150) / 2 - iconOffset;
-		iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (150 * 1) / 2 - iconOffset * 2;
+		iconP1.x = FlxMath.lerp(iconP1.x, healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * 1 - 150) / 2 - iconOffset, CoolUtil.boundTo(elapsed * 9.8, 0, 1));
+		iconP2.x = FlxMath.lerp(iconP2.x, healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (150 * 1) / 2 - iconOffset * 2, CoolUtil.boundTo(elapsed * 9.8, 0, 1));
 		}
 
 		if (health > 2)
