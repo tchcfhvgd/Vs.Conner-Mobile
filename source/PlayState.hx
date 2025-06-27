@@ -3563,7 +3563,7 @@ class PlayState extends MusicBeatState
 					case 0:
 						if(phillyGlowGradient.visible)
 						{
-							doFlash();
+							//doFlash();
 							if(ClientPrefs.camZooms)
 							{
 								FlxG.camera.zoom += 0.5;
@@ -3588,7 +3588,7 @@ class PlayState extends MusicBeatState
 
 						if(!phillyGlowGradient.visible)
 						{
-							doFlash();
+							//doFlash();
 							if(ClientPrefs.camZooms)
 							{
 								FlxG.camera.zoom += 0.5;
@@ -5161,7 +5161,7 @@ class PlayState extends MusicBeatState
 		if(qqqebEventTween != null)
 		qqqebEventTween.cancel();
 
-		qqqebEventTween = FlxTween.tween(eye, {alpha: 0.35}, 0.3, {onComplete: function(twn:FlxTween) {
+		qqqebEventTween = FlxTween.tween(eye, {alpha: 0.4}, 0.3, {onComplete: function(twn:FlxTween) {
 								//qqqebEventTween = null;
 		qqqebEventTween = FlxTween.tween(eye, {alpha: 0}, 0.3, {onComplete: function(twn:FlxTween) {
 								qqqebEventTween = null;
