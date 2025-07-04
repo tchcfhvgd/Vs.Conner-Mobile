@@ -529,6 +529,8 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'connerfire': //Conner
+			    GameOverSubstate.characterName = "bffire";
+			    
 			    var bg:BGSprite = new BGSprite('bgfire', -590, -210, 1, 1);
 				add(bg);
 				
@@ -2187,10 +2189,10 @@ class PlayState extends MusicBeatState
 		if(!ClientPrefs.middleScroll)
 		{
 		for (i in 0...opponentStrums.length) {
-		opponentStrums.members[i].x += 432;
+		opponentStrums.members[i].x += 632;
 		}
 		for (i in 0...playerStrums.length) {
-		playerStrums.members[i].x -= 432;
+		playerStrums.members[i].x -= 632;
 		}
 		}
 		}
@@ -3144,12 +3146,12 @@ class PlayState extends MusicBeatState
 		var iconOffset:Int = 26;
 		
 		if (flipHealthBar) {
-			iconP2.x = FlxMath.lerp(iconP2.x, healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 0, 100) * 0.01)) + (150 * 1 - 150) / 2 - iconOffset, CoolUtil.boundTo(elapsed * 9.8, 0, 1));
-			iconP1.x = FlxMath.lerp(iconP1.x, healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 0, 100) * 0.01)) - (150 * 1) / 2 - iconOffset * 2, CoolUtil.boundTo(elapsed * 9.8, 0, 1));
+			iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 0, 100) * 0.01)) - (150 * iconP1.scale.x - 150) / 2 - iconOffset;
+		    iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 0, 100) * 0.01)) + (150 * iconP2.scale.x) / 2 - iconOffset * 2;
 			}
 		else {
-		iconP1.x = FlxMath.lerp(iconP1.x, healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * 1 - 150) / 2 - iconOffset, CoolUtil.boundTo(elapsed * 9.8, 0, 1));
-		iconP2.x = FlxMath.lerp(iconP2.x, healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (150 * 1) / 2 - iconOffset * 2, CoolUtil.boundTo(elapsed * 9.8, 0, 1));
+		    iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
+		    iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
 		}
 
 		if (health > 2)
