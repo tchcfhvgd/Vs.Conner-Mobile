@@ -1172,7 +1172,6 @@ class PlayState extends MusicBeatState
 		if (flipHealthBar) {
 		healthBar.angle = 180;
 		}
-		healthBar.numDivisions = 10000;
 		healthBar.visible = !ClientPrefs.hideHud;
 		healthBar.alpha = ClientPrefs.healthBarAlpha;
 		add(healthBar);
@@ -1198,15 +1197,6 @@ class PlayState extends MusicBeatState
 		iconP2.flipX = true;
 		flipHealthBar = true;
 		healthBar.angle = 180;
-		if(!ClientPrefs.middleScroll)
-		{
-		for (i in 0...opponentStrums.length) {
-		opponentStrums.members[i].x += 432;
-		}
-		for (i in 0...playerStrums.length) {
-		playerStrums.members[i].x -= 432;
-		}
-		}
 		}
 		
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
@@ -2191,6 +2181,20 @@ class PlayState extends MusicBeatState
 				//if(ClientPrefs.middleScroll) opponentStrums.members[i].visible = false;
 			}
 
+			switch (PlayState.SONG.song)
+		{
+		case 'catlover':
+		if(!ClientPrefs.middleScroll)
+		{
+		for (i in 0...opponentStrums.length) {
+		opponentStrums.members[i].x += 432;
+		}
+		for (i in 0...playerStrums.length) {
+		playerStrums.members[i].x -= 432;
+		}
+		}
+		}
+			
 			startedCountdown = mobileControls.instance.visible = true;
 			Conductor.songPosition = -Conductor.crochet * 5;
 			setOnLuas('startedCountdown', true);
@@ -2951,7 +2955,6 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
-	var percent:Float = 50;
 
 	override public function update(elapsed:Float)
 	{
@@ -3139,10 +3142,6 @@ class PlayState extends MusicBeatState
 		iconP2.updateHitbox();
 
 		var iconOffset:Int = 26;
-
-		percent = FlxMath.lerp(percent, health * 50, CoolUtil.boundTo(elapsed * 9.1, 0, 1));
-		healthBar.percent = percent;
-		if (percent > 100) {percent = 100;}
 		
 		if (flipHealthBar) {
 			iconP2.x = FlxMath.lerp(iconP2.x, healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 0, 100) * 0.01)) + (150 * 1 - 150) / 2 - iconOffset, CoolUtil.boundTo(elapsed * 9.8, 0, 1));
